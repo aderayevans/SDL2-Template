@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cmake -S . -B bin/debug/ && sudo cmake --build bin/debug/ --target install && SDL2_Template

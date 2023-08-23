@@ -1,6 +1,3 @@
-################################################################################
-## Basic settings
-################################################################################
 cmake_minimum_required(VERSION 3.21.1)
 # set the project name
 project(SDL2_Template VERSION 1.0)
@@ -16,15 +13,28 @@ add_compile_options(
 )
 
 find_package(SDL2 REQUIRED)
+find_package(SDL_image REQUIRED)
+find_package(SDL_ttf REQUIRED)
 
 # add the executable
 add_executable(${PROJECT_NAME} 
     src/main.cpp
 )
 
-target_include_directories(${PROJECT_NAME} PRIVATE include/)
+target_include_directories(${PROJECT_NAME} PRIVATE 
+    include/
+    ${SDL2_INCLUDE_DIRS}/
+    ${SDL_INCLUDE_DIRS}/
+    ${SDL2_IMAGE_INCLUDE_DIRS}/
+    ${SDL_IMAGE_INCLUDE_DIRS}/
+)
 
-target_link_libraries(${PROJECT_NAME} SDL2::SDL2)
+include_directories(${SDL2_INCLUDE_DIRS} ${SDL2_IMAGE_INCLUDE_DIRS})
+
+target_link_libraries(${PROJECT_NAME} 
+    ${SDL2_LIBRARIES}
+    ${SDL2_IMAGE_LIBRARIES}
+)
 
 install(TARGETS ${PROJECT_NAME}
     RUNTIME DESTINATION sbin)
