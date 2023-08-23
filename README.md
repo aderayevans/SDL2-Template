@@ -11,6 +11,8 @@ sudo apt-get install -y \
     libsdl2-image-dev libsdl-image1.2-dev
     libsdl2-ttf-dev libsdl-ttf2.0-dev
 
+pacman -S mingw-w64-x86_64-toolchain cmake mingw-w64-x86_64-SDL2 mingw-w64-x86_64-SDL2_image mingw-w64-x86_64-SDL2_ttf --noconfirm
+
 Command to Build, Install and Run
 ```shell
 cmake -S . -B bin/debug/
