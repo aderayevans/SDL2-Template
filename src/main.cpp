@@ -1,10 +1,13 @@
+#include <iostream>
+
 // for initializing and shutdown functions
 #include <SDL2/SDL.h>
 // for rendering images and graphics on screen
 #include <SDL2/SDL_image.h>
 // for using SDL_Delay() functions
 #include <SDL2/SDL_timer.h>
-#include <iostream>
+
+#include "SDL2_Template_Config.h"
 
 const short WINDOW_WIDTH = 640;
 const short WINDOW_HEIGHT = 480;
@@ -37,13 +40,15 @@ int main(int argc, char **argv)
 
     SDL_Event event;
 
-    while (true) 
+    bool gameRunning = true;
+
+    while (gameRunning) 
     {
         while (SDL_PollEvent(&event))
         {
             if (event.type == SDL_QUIT)
             {
-                break;
+                gameRunning = false;
             }
         }
     }
