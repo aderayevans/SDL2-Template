@@ -10,6 +10,8 @@ sudo apt-get install -y \
     g++ libsdl2-2.0 libsdl2-dev \
     libsdl2-image-dev
 
+pacman -S mingw-w64-x86_64-toolchain cmake mingw-w64-x86_64-SDL2 mingw-w64-x86_64-SDL2_image mingw-w64-x86_64-SDL2_ttf --noconfirm
+
 Command to Build, Install and Run
 ```shell
 cmake -S . -B bin/debug/ && sudo cmake --build bin/debug/ && bin/debug/SDL2_Template

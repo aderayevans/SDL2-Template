@@ -1,13 +1,11 @@
 #include <iostream>
 
 // for initializing and shutdown functions
-#include <SDL2/SDL.h>
+#include <SDL.h>
 // for rendering images and graphics on screen
-#include <SDL2/SDL_image.h>
+#include <SDL_image.h>
 // for using SDL_Delay() functions
-#include <SDL2/SDL_timer.h>
-
-#include "SDL2_Template_Config.h"
+#include <SDL_timer.h>
 
 const short WINDOW_WIDTH = 640;
 const short WINDOW_HEIGHT = 480;
