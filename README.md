@@ -17,13 +17,12 @@ Run the `build.bat` batch script to build the project
 
 Run the `start.bat` to start the project
 
-Could run those two batch scripts inside normal windows command line
+Could run those two batches scripts inside normal windows command line
 
 ## For Linux (Ubuntu specific):
 sudo apt-get install -y \
     g++ libsdl2-2.0 libsdl2-dev \
     libsdl2-image-dev
-
 
 Command to Build, Install and Run
 ```shell
