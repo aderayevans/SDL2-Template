@@ -13,22 +13,40 @@ Install and run Msys2 `as administrator`
 ```shell
 pacman -S mingw-w64-x86_64-toolchain cmake --noconfirm
 ```
-Run the `build.bat` batch script to build the project
-
-Run the `start.bat` to start the project
-
-Could run those two batch scripts inside normal windows command line
-
-## For Linux (Ubuntu specific):
-sudo apt-get install -y \
-    g++ libsdl2-2.0 libsdl2-dev \
-    libsdl2-image-dev
 
 Command to Build, Install and Run
 ```shell
-cmake -S . -B bin/debug/ && sudo cmake --build bin/debug/ && bin/debug/SDL2_Template
+# only run this line the first time
+cmake -G "MinGW Makefiles" -S . -B bin/debug/
 
-or
+# run these everytime after made changes and to execute the project
+cmake --build bin/debug/ && start /b bin/debug/SDL2_Template.exe
 
-./run
+# or Run the `windows_build.bat` batch script to build and start the project on windows
+./windows_build.bat
+```
+
+## For Linux (Ubuntu specific):
+```shell
+sudo apt-get install -y \
+    g++ cmake libsdl2-2.0 libsdl2-dev \
+    libsdl2-image-dev
+
+git clone https://github.com/aderayevans/SDL2-Template.git
+
+cd SDL2-Template
+
+chmod +x ubuntu_build
+```
+
+Command to Build, Install and Run
+```shell
+# only run this line the first time
+cmake -S . -B bin/debug/
+
+# run these everytime after made changes and to execute the project
+sudo cmake --build bin/debug/ && bin/debug/SDL2_Template
+
+# or
+./ubuntu_build
 ```

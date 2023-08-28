@@ -1,3 +1,0 @@
-#!/bin/bash
-
-rm -rf bin/debug && cmake -G "MinGW Makefiles" -S . -B bin/debug/ && cmake --build bin/debug/ && start /b bin/debugSDL2_Template.exe
