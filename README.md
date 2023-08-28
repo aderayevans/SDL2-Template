@@ -23,7 +23,7 @@ cmake -G "MinGW Makefiles" -S . -B bin/debug/
 cmake --build bin/debug/ && start /b bin/debug/SDL2_Template.exe
 
 # or Run the `windows_build.bat` batch script to build and start the project on windows
-./windows_build.bat
+.\windows_build.bat
 ```
 
 ## For Linux (Ubuntu specific):
