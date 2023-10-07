@@ -16,13 +16,14 @@ include(FetchContent)
 set(FETCHCONTENT_QUIET FALSE)
 
 FetchContent_Declare(
-    SDL2
+    SDL2main
     GIT_REPOSITORY https://github.com/libsdl-org/SDL.git
     GIT_TAG release-2.26.3
     GIT_SHALLOW TRUE
     GIT_PROGRESS TRUE
+    OVERRIDE_FIND_PACKAGE
 )
-FetchContent_MakeAvailable(SDL2)
+FetchContent_MakeAvailable(SDL2main)
 
 FetchContent_Declare(
     SDL2_image
