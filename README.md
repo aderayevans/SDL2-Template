@@ -26,6 +26,13 @@ cmake --build bin/debug/ && start /b bin/debug/SDL2_Template.exe
 .\windows_build.bat
 ```
 
+For error 
+```
+the procedure entry point _zst28 thow bad array new lenthw could not be located in dynamic link library
+```
+Please copy file libstdc++-6.dll and put it next to the exe file
+Could found it at msys64\mingw64\bin
+
 ## For Linux (Ubuntu specific):
 ```shell
 sudo apt-get install -y \
